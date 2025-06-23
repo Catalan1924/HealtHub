@@ -24,6 +24,10 @@ const PatientDashboard = () => {
 
     setAppointments(serviceAppointments);
   }, []);
+  const allAppointments = JSON.parse(localStorage.getItem("appointments")) || [];
+const myAppointments = allAppointments.filter(
+  (a) => a.patient === currentUser.username
+);
 
   const handlePrint = () => {
     window.print();
@@ -34,7 +38,7 @@ const PatientDashboard = () => {
       {/* Background Gradient */}
       <div className="absolute inset-0 bg-gradient-to-r from-pink-50 to-pink-100 z-0"></div>
 
-      <div className="relative z-10 p-6 max-w-6xl mx-auto bg-white/90 backdrop-blur-sm rounded-xl shadow-md">
+      <div className="relative z-10 p-6 max-w-6xl mx-auto bg-white/90 backdrop-blur-sm rounded-xl shadow-md h-screen">
         <h2 className="text-xl font-bold text-blue-700 mb-4">
           {greeting} {holidayMessage && ` - ${holidayMessage}`} {currentUser.username}
         </h2>
@@ -43,7 +47,7 @@ const PatientDashboard = () => {
         <div className="flex justify-end mb-4">
           <Link
             to="/profile"
-            className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 text-sm font-medium"
+            className="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700 text-sm font-medium"
           >
             My Profile
           </Link>

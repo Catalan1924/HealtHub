@@ -22,6 +22,7 @@ const DoctorAppointments = ({ currentUser }) => {
         a.time === appointments[index].time &&
         a.patient === appointments[index].patient
     );
+    console.log(globalIndex);
     if (globalIndex !== -1) {
       allAppointments[globalIndex].status = status;
       localStorage.setItem("appointments", JSON.stringify(allAppointments));

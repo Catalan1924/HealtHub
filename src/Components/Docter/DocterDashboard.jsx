@@ -84,8 +84,8 @@ const DoctorDashboard = () => {
               {appointments.length > 0 ? (
                 appointments.map((item, index) => (
                   <tr key={index} className="border-t">
-                    <td className="border px-4 py-2 text-center">{item.service}</td>
-                    <td className="border px-4 py-2 text-center">{item.day}</td>
+                    <td className="border px-4 py-2 text-center">{item.reason}</td>
+                    <td className="border px-4 py-2 text-center">{item.date}</td>
                     <td className="border px-4 py-2 text-center">{item.time}</td>
                     <td className="border px-4 py-2 text-center">{item.patient}</td>
                   </tr>

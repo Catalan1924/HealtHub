@@ -73,7 +73,7 @@ const Profile = () => {
       
       <button
         onClick={handleBack}
-className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 text-sm font-medium"
+        className="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700 text-sm font-medium"
       >
         ← Back
       </button>
@@ -106,21 +106,21 @@ className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 text-sm fo
       <div className="flex flex-wrap gap-3">
         <button
           onClick={handlePasswordChange}
-          className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 text-sm font-medium"
+          className="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700 text-sm font-medium"
         >
           Change Password
         </button>
 
         <button
           onClick={handleSaveChanges}
-          className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 text-sm font-medium"
+          className="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700 text-sm font-medium"
         >
           Save Profile Changes
         </button>
 
         <button
           onClick={handleLogout}
-          className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 text-sm font-medium"
+          className="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700 text-sm font-medium"
         >
           Log Out
         </button>
