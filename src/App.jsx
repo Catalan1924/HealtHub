@@ -2,10 +2,10 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Login from "./Components/Auth/Login";
 import AdminDashboard from "./Components/Admin/Dashboard";
 import DoctorDashboard from "./Components/Docter/DocterDashboard";
-import PatientDashboard from "./Components/Patient/PatientDashboard";
+import PatientDashboard from "./Components/Student/PatientDashboard";
 import Signup from "./Components/Auth/Signup"; 
 import Profile from "./Components/Profile";
-import BookAppointment from "./Components/Patient/BookAppointment";
+import BookAppointment from "./Components/Student/BookAppointment";
 import DoctorAppointments from "./Components/Docter/DoctorAppointments";
 import GridDistortion from "./Bits/GridDistortion";
 function App({loggedUser}) {

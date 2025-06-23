@@ -9,7 +9,7 @@ export default function useGreetings() {
     '12-25': "Merry Christmas :christmas_tree:",
     '5-1': "Happy Labour Day :hammer_and_pick:", 
     '1-1': "Happy New Year :fireworks:",
-    '6-23': "Happy Presentation Day :trophy:"
+    '6-23': ""
   };
 
   useEffect(() => {

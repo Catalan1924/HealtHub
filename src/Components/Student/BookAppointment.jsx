@@ -57,10 +57,10 @@ const BookAppointment = () => {
           onChange={handleChange}
           className="w-full border mb-3 px-3 py-2 rounded"
         />
-        <button type="submit" className="w-15px bg-blue-600 text-white py-2 inline-flex padding-10 rounded hover:bg-green-700">
+        <button type="submit" className="w-full bg-blue-600 text-white py-2  padding-10 rounded hover:bg-green-700">
           Book
         </button>
-      <button type="button" className="w-15px bg-green-600 text-white py-2 rounded hover:bg-red-700">
+      <button type="button" className="w-full bg-green-600 text-white py-2 rounded hover:bg-red-700">
           Cancel
         </button>
         {message && <p className="text-green-600 mt-2">{message}</p>}

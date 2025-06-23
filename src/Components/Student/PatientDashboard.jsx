@@ -32,7 +32,7 @@ const PatientDashboard = () => {
   return (
     <div className="">
       {/* Background Gradient */}
-      <div className="absolute inset-0 bg-gradient-to-r from-blue-50 to-blue-100 z-0"></div>
+      <div className="absolute inset-0 bg-gradient-to-r from-pink-50 to-pink-100 z-0"></div>
 
       <div className="relative z-10 p-6 max-w-6xl mx-auto bg-white/90 backdrop-blur-sm rounded-xl shadow-md">
         <h2 className="text-xl font-bold text-blue-700 mb-4">
@@ -49,13 +49,10 @@ const PatientDashboard = () => {
           </Link>
         </div>
 
-      
-        <div className="mb-6 text-sm bg-blue-50 p-4 rounded shadow-sm space-y-1">
-          <p><strong>service:</strong> {currentUser.service || "Not set"}</p>
-        </div>
+
 
         <p className="mb-4 text-gray-600">
-          Your appointments for <strong>{currentUser.service}</strong> are shown below:
+              Your appointments for <strong>{currentUser.service}</strong> are shown below:
         </p>
 
         
@@ -63,27 +60,28 @@ const PatientDashboard = () => {
           <table className="w-full border text-sm">
             <thead className="bg-blue-100">
               <tr>
+                  <th className="border px-4 py-2">Service</th>
                 <th className="border px-4 py-2">Day</th>
                 <th className="border px-4 py-2">Time</th>
-                <th className="border px-4 py-2">Doctor</th>
+                <th className="border px-4 py-2">Patient</th>
               </tr>
             </thead>
             <tbody>
               {appointments.length > 0 ? (
-                appointments.map((appointment, index) => (
+                appointments.map((item, index) => (
                   <tr key={index} className="border-t">
-                    <td className="border px-4 py-2 text-center">{appointment.day}</td>
-                    <td className="border px-4 py-2 text-center">{appointment.time}</td>
-                    <td className="border px-4 py-2 text-center">{appointment.doctor}</td>
+                    <td className="border px-4 py-2 text-center">{item.service}</td>
+                    <td className="border px-4 py-2 text-center">{item.day}</td>
+                    <td className="border px-4 py-2 text-center">{item.time}</td>
+                    <td className="border px-4 py-2 text-center">{item.patient}</td>
                   </tr>
                 ))
               ) : (
                 <tr>
-                  <td colSpan="4" className="text-center text-gray-500 py-4">
-                    No appointments available for your service yet.
+                  <td colSpan="6" className="text-center py-4 text-gray-500">
+                    No appointments assigned yet.
                   </td>
-                </tr>
-                
+                  </tr>
               )}
             </tbody>
           </table>
